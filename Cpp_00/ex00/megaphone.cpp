@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <locale>
 
 int main(int argc, char const *argv[])
 {
