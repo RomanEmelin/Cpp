@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mwinter/Cpp/Cpp_00/ex01/Contact.cpp
+Contact.hpp
+/Users/mwinter/Cpp/Cpp_00/ex01/Contact.hpp
+
+/Users/mwinter/Cpp/Cpp_00/ex01/Contact.hpp
+string
+-
+iomanip
+-
+iostream
+-
+
+/Users/mwinter/Cpp/Cpp_00/ex01/PhoneBook.cpp
+PhoneBook.hpp
+/Users/mwinter/Cpp/Cpp_00/ex01/PhoneBook.hpp
+
+/Users/mwinter/Cpp/Cpp_00/ex01/PhoneBook.hpp
+string
+-
+iomanip
+-
+iostream
+-
+Contact.hpp
+/Users/mwinter/Cpp/Cpp_00/ex01/Contact.hpp
+
+/Users/mwinter/Cpp/Cpp_00/ex01/main.cpp
+PhoneBook.hpp
+/Users/mwinter/Cpp/Cpp_00/ex01/PhoneBook.hpp
+string
+-
+iostream
+-
+
