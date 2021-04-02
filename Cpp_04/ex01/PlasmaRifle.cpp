@@ -1,9 +1,7 @@
 #include "PlasmaRifle.hpp"
 
-PlasmaRifle::PlasmaRifle(std::string const &name, int aPCost, int damage):
-	AWeapon(name, aPCost, damage) {
-
-	std::cout << RED + this->_name + ENDC + " pR created!" << std::endl;
+PlasmaRifle::PlasmaRifle():
+	AWeapon("Plasma Rifle", 5, 21) {
 }
 
 PlasmaRifle &PlasmaRifle::operator = (const PlasmaRifle &copy) {

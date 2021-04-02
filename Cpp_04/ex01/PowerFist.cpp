@@ -1,9 +1,7 @@
 #include "PowerFist.hpp"
 
-PowerFist::PowerFist(std::string const &name, int aPCost, int damage):
-	AWeapon(name, aPCost, damage) {
-
-	std::cout << RED + this->_name + ENDC + " pF created!" << std::endl;
+PowerFist::PowerFist():
+	AWeapon("Power Fist", 8, 50) {
 }
 
 PowerFist &PowerFist::operator = (const PowerFist &copy) {

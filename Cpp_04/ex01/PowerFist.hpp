@@ -4,11 +4,8 @@
 
 class PowerFist: public AWeapon {
 
-private:
-	PowerFist();
-
 public:
-	PowerFist(std::string const & name, int aPCost, int damage);
+	PowerFist();
 	PowerFist &operator = (const PowerFist &copy);
 	PowerFist(PowerFist const &copy);
 	virtual ~PowerFist();

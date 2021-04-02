@@ -3,17 +3,57 @@
 #include "PowerFist.hpp"
 #include "SuperMutant.hpp"
 #include "RadScorpion.hpp"
+#include "Character.hpp"
 
 int main() {
 
-	PlasmaRifle plasmaRifle("Plasma rifle", 21, 5);
-	PowerFist	powerFist("Power fist", 50, 8);
-	SuperMutant superMutant(170, "Super mutant");
-	RadScorpion radScorpion(80, "RadScorpion");
+	Character* me = new Character("me");
+	std::cout << *me;
 
-	powerFist.attack();
-	plasmaRifle.attack();
-	superMutant.takeDamage(65);
-	std::cout << superMutant.getHP() << superMutant.getType() << std::endl;
+	Enemy* radScorpion = new RadScorpion();
+	Enemy* superMutant = new SuperMutant();
+	AWeapon* plasmaRifle = new PlasmaRifle();
+	AWeapon* powerFist = new PowerFist();
+
+	me->equip(plasmaRifle);
+	std::cout << *me;
+	me->equip(powerFist);
+	me->attack(radScorpion);
+	std::cout << *me;
+	me->equip(plasmaRifle);
+	std::cout << *me;
+	me->attack(radScorpion);
+	std::cout << *me;
+	me->attack(radScorpion);
+	std::cout << *me;
+	me->equip(powerFist);
+	std::cout << *me;
+	me->attack(superMutant);
+	std::cout << *me;
+	me->attack(superMutant);
+	std::cout << *me;
+	me->attack(superMutant);
+	std::cout << *me;
+	me->equip(plasmaRifle);
+	std::cout << *me;
+	me->attack(superMutant);
+	std::cout << *me;
+	me->attack(superMutant);
+	std::cout << *me;
+	me->attack(superMutant);
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	me->equip(powerFist);
+	std::cout << *me;
+	me->attack(superMutant);
+	delete(me);
+	delete(plasmaRifle);
+	delete(powerFist);
+	return 0;
 }
 

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "AWeapon.hpp"
+#include "Enemy.hpp"
 #define RED "\x1B[31m"
 #define GREEN "\x1B[32m"
 #define ENDC "\x1B[0m"
@@ -27,7 +28,10 @@ public:
 	void equip(AWeapon *weapon);
 	void attack(Enemy *enemy);
 	std::string const &getName() const;
+	AWeapon *getWeapon() const;
+	int getAP() const;
 };
 
+std::ostream &operator << (std::ostream &out, Character const &character);
 
 #endif //CPP_CHARACTER_H

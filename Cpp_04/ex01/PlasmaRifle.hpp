@@ -5,7 +5,7 @@
 class PlasmaRifle: public AWeapon {
 
 public:
-	PlasmaRifle(std::string const & name, int aPCost, int damage);
+	PlasmaRifle();
 	PlasmaRifle &operator = (const PlasmaRifle &copy);
 	PlasmaRifle(PlasmaRifle const &copy);
 	virtual ~PlasmaRifle();

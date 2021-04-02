@@ -2,8 +2,6 @@
 
 AWeapon::AWeapon(std::string const & name, int aPCost, int damage):
 _name(name), _aPCost(aPCost), _damage(damage) {
-
-	std::cout << RED + this->_name + ENDC + " weapon created!" << std::endl;
 }
 
 AWeapon &AWeapon::operator = (const AWeapon &copy) {

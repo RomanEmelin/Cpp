@@ -56,6 +56,7 @@ int Fixed::toInt() const {
 
 	return (this->_valueStore >> this->_fractionalBits);
 }
+
 std::ostream& operator << (std::ostream &out, Fixed const &_valueStore) {
 
 	out << _valueStore.toFloat();

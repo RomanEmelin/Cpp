@@ -4,11 +4,8 @@
 
 class SuperMutant: public Enemy{
 
-private:
-	SuperMutant();
-
 public:
-	SuperMutant(int hp, std::string const &type);
+	SuperMutant();
 	SuperMutant(SuperMutant const &copy);
 	SuperMutant &operator = (SuperMutant const &copy);
 

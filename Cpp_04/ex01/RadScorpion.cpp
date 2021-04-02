@@ -1,8 +1,8 @@
 #include "RadScorpion.hpp"
 
-RadScorpion::RadScorpion(int hp, std::string const &type): Enemy(hp, type) {
+RadScorpion::RadScorpion(): Enemy(80, "RadScorpion") {
 
-	std::cout << RED << "* click" + PURPLE + " click" + GREEN + " click *" << ENDC << std::endl;
+	std::cout << RED << "* click" << PURPLE << " click" << GREEN << " click *" << ENDC << std::endl;
 }
 
 RadScorpion::RadScorpion(RadScorpion const &copy): Enemy(copy){
@@ -23,9 +23,9 @@ RadScorpion::~RadScorpion() {
 
 void RadScorpion::takeDamage(int damage) {
 
-	if (damage > 3 && this->_hp > 0) {
+	if (damage > 0 && this->_hp > 0) {
 
-		this->_hp -= (damage - 3);
+		this->_hp -= damage;
 		if (this->_hp < 0)
 			this->_hp = 0;
 	}

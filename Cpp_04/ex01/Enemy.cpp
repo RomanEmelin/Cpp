@@ -1,8 +1,6 @@
 #include "Enemy.hpp"
 
 Enemy::Enemy(int hp, std::string const &type): _hp(hp), _type(type) {
-
-	std::cout << "Enemy type of " << RED + this->_type + ENDC + " created." << std::endl;
 }
 
 Enemy::Enemy(Enemy const &copy) {
@@ -18,8 +16,6 @@ Enemy &Enemy::operator = (Enemy const &copy) {
 }
 
 Enemy::~Enemy() {
-
-	std::cout << "Enemy type of " << RED + this->_type + ENDC + " is dead." << std::endl;
 }
 
 std::string const Enemy::getType() const {

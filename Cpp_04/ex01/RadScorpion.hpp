@@ -4,11 +4,8 @@
 
 class RadScorpion: public Enemy {
 
-private:
-	RadScorpion();
-
 public:
-	RadScorpion(int hp, std::string const &type);
+	RadScorpion();
 	RadScorpion(RadScorpion const &copy);
 	RadScorpion &operator = (RadScorpion const &copy);
 
