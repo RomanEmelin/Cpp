@@ -16,6 +16,8 @@ public:
 	SuperTrap(const SuperTrap &copy);
 	~SuperTrap();
 	SuperTrap &operator = (const SuperTrap &copy);
+
+	void printData() const;
 };
 
 

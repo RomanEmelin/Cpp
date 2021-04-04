@@ -73,6 +73,7 @@ int main() {
 	std::cout << "<+===========+>" << std::endl;
 	SuperTrap superTrap("SuperMan");
 
+	superTrap.printData();
 	superTrap.takeDamage(21);
 	superTrap.beRepaired(63);
 	superTrap.rangedAttack(scav.getName());
@@ -83,5 +84,6 @@ int main() {
 	superTrap.vaultHunterDotExe(enemy.getName());
 	superTrap.vaultHunterDotExe(enemy.getName());
 	superTrap.vaultHunterDotExe(enemy.getName());
+
 }
 

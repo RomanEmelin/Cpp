@@ -13,6 +13,9 @@ ClapTrap::ClapTrap(std::string name): _name(name) {
 	std::cout << RED << this->_name << GREEN << " CL4p-TP is rise!" << ENDC << std::endl;
 }
 
+ClapTrap::ClapTrap() {
+
+}
 ClapTrap::~ClapTrap() {
 
 	std::cout << RED << this->_name << " CL4P-TP fallen" << ENDC << std::endl;

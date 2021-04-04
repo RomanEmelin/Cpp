@@ -14,7 +14,12 @@ NinjaTrap::NinjaTrap (std::string name): ClapTrap(name) {
 	this->_armorDamageReduction = 0;
 	std::cout << RED << this->_name << GREEN << " N1NJ4-TP is rise!" << ENDC << std::endl;
 }
+NinjaTrap::NinjaTrap(): ClapTrap() {
 
+	this->_energyPoints = 120;
+	this->_maxEnergyPoints = 120;
+	this->_meleeAttackDamage = 60;
+}
 NinjaTrap::~NinjaTrap() {
 
 	std::cout << RED << this->_name << " N1NJ4-TP fallen" << ENDC << std::endl;

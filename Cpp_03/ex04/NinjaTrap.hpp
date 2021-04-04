@@ -9,7 +9,7 @@
 
 class NinjaTrap: virtual public ClapTrap {
 
-private:
+protected:
 	NinjaTrap();
 
 public:

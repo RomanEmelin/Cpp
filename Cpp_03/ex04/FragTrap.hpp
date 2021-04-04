@@ -4,10 +4,8 @@
 
 class FragTrap: virtual public ClapTrap {
 
-private:
-	FragTrap();
-
 protected:
+	FragTrap();
 	static std::string typeOfAttack[10];
 
 public:

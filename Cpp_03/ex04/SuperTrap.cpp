@@ -1,15 +1,7 @@
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(name), NinjaTrap(name) {
+SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(), NinjaTrap() {
 
-	this->_hitPoints = this->FragTrap::_hitPoints;
-	this->_maxHitPoints = this->FragTrap::_maxHitPoints;
-	this->_energyPoints = this->NinjaTrap::_energyPoints;
-	this->_maxEnergyPoints = this->NinjaTrap::_maxEnergyPoints;
-	this->_level = 1;
-	this->_meleeAttackDamage = this->NinjaTrap::_meleeAttackDamage;
-	this->_rangedAttackDamage = this->FragTrap::_rangedAttackDamage;
-	this->_armorDamageReduction = this->FragTrap::_armorDamageReduction;
 	std::cout << RED << this->_name << GREEN << " SUP3R-TP is rise!" << ENDC << std::endl;
 }
 
@@ -37,4 +29,16 @@ SuperTrap::SuperTrap(const SuperTrap &copy): ClapTrap(copy._name), FragTrap(copy
 
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
+}
+
+void SuperTrap::printData() const {
+
+	std::cout << this->_name << std::endl;
+	std::cout << this->_hitPoints << std::endl;
+	std::cout << this->_maxEnergyPoints << std::endl;
+	std::cout << this->_energyPoints << std::endl;
+	std::cout << this->_maxEnergyPoints << std::endl;
+	std::cout << this->_meleeAttackDamage << std::endl;
+	std::cout << this->_rangedAttackDamage << std::endl;
+	std::cout << this->_armorDamageReduction << std::endl;
 }

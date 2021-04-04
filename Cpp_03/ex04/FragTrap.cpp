@@ -14,6 +14,14 @@ std::string FragTrap::typeOfAttack[10] = {
 		"Boo Ray, Boo Ray Dead. Obey your blood oath and come forth from the land of Abaddon. Fires of Gehenna become a fiery blast and burn everything around. Exodus\nBrain Brain Dead. Obey the contract of blood from the land of Abadon come forth. Gehenna's Fire explode in flame and in it's sum incinerate all. Evil Blaze of Burning EXODUS"
 };
 
+FragTrap::FragTrap(): ClapTrap() {
+
+	this->_hitPoints = 100;
+	this->_maxHitPoints = 100;
+	this->_rangedAttackDamage = 20;
+	this->_armorDamageReduction = 5;
+}
+
 FragTrap::FragTrap(std::string name): ClapTrap(name) {
 
 	this->_hitPoints = 100;
