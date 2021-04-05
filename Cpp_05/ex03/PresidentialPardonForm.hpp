@@ -19,6 +19,7 @@ public:
 	static std::string const &_name;
 	void execute(Bureaucrat const &executor) const;
 	static Form *generateForm(const std::string &target);
+	virtual	void action() const;
 };
 
 

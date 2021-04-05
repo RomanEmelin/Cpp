@@ -15,10 +15,8 @@ RobotomyRequestForm &RobotomyRequestForm::operator = (RobotomyRequestForm const 
 	(void)copy;
 	return (*this);
 }
+void RobotomyRequestForm::action() const {
 
-void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
-
-	Form::execute(executor);
 	std::cout << GREEN << "Woojuuuh! Beep beep..." << ENDC << std::endl;
 	if (rand() % 2 == 0) {
 		std::cout << GREEN << this->_target << ENDC;
@@ -28,6 +26,12 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
 		std::cout << RED << this->_target << ENDC;
 		std::cout << " robotomized is failure." << std::endl;
 	}
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
+
+	Form::execute(executor);
+	action();
 }
 
 Form *RobotomyRequestForm::generateForm(const std::string &target) {

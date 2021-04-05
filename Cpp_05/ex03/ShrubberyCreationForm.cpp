@@ -49,16 +49,15 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator = (ShrubberyCreationForm 
 const char *ShrubberyCreationForm::TargetOpenFileException::what() const throw() {
 
 	return "\x1B[31mShrubberyCreationForm exception: can't open file.\x1B[0m";
-};
+}
 
 const char *ShrubberyCreationForm::WriteToFileException::what() const throw() {
 
 	return "\x1B[31mShrubberyCreationForm exception: can't write to file.\x1B[0m";
-};
+}
 
-void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
+void ShrubberyCreationForm::action() const {
 
-	Form::execute(executor);
 	std::ofstream file;
 
 	file.open(this->_target + "_shrubbery", std::ios::trunc);
@@ -69,6 +68,12 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 		file << ShrubberyCreationForm::_tree[i] << std::endl;
 	}
 	file.close();
+}
+
+void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
+
+	Form::execute(executor);
+	action();
 }
 
 Form *ShrubberyCreationForm::generateForm(const std::string &target) {

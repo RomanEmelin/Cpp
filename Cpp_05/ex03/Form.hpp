@@ -41,7 +41,8 @@ public:
 	class GradeTooLowException: public std::exception {
 		virtual const char* what() const throw();
 	};
-	virtual void execute(Bureaucrat const &executor) const;
+	void execute(Bureaucrat const &executor) const;
+	virtual	void action() const = 0;
 	int getSignGrade() const;
 	int getExecuteGrade() const;
 	bool isSigned() const;

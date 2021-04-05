@@ -1,6 +1,7 @@
 #include "iostream"
 #include <string>
 #include "Converter.hpp"
+#include <cmath>
 
 int main(int argc, char *argv[]) {
 
@@ -11,8 +12,8 @@ int main(int argc, char *argv[]) {
 	}
 	else {
 		Converter convert(argv[1]);
-		std::cout << p << std::endl;
+		convert.doIt();
 	}
-	return (0)
+	return (0);
 }
 
